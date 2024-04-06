@@ -4,7 +4,7 @@ import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 
@@ -33,7 +33,7 @@ const DataTable = (props: Props) => {
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 10,
+                pageSize: 5,
               },
             },
           }}

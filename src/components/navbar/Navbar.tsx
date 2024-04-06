@@ -44,7 +44,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     [theme.breakpoints.up('sm')]: {
-      width: '25ch',
+      width: 'ch',
       '&:focus': {
         width: '30ch',
       },
@@ -53,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ backgroundColor: 'black', marginBottom: 20 }}>
       <div className="logo">
         <span>InvestIntuit</span>
       </div>
