@@ -4,6 +4,8 @@ import HeaderBanner from "../../components/headerBanner/HeaderBanner";
 import { useEffect, useState } from "react";
 import { apiresponse } from "../../data";
 import PeersDataGrid from "../../components/peersDataGrid/PeersDataGrid";
+import ShareHoldingPatternChart from "../../components/shareHoldingPatternChart/ShareHoldingPatternChart";
+import FinancialChartTabs from "../../components/financialChartTabs/FinancialChartTabs";
 
 const StockOverview = () => {
 
@@ -31,6 +33,13 @@ const StockOverview = () => {
                   <Grid item xs={6}>
                           <PeersDataGrid peerList={stockDetails.similarAssets.peerList} />
 
+                      </Grid>
+                      <Grid item xs={6}>
+                      <FinancialChartTabs financialStatement={stockDetails.financialStatement} />
+
+                      </Grid>
+                      <Grid item xs={12}>
+                        <ShareHoldingPatternChart shareHoldingPattern={stockDetails.shareHoldingPattern} />
                       </Grid>
                       </>
 }
