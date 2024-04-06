@@ -1,6 +1,5 @@
 package com.chalang.hackathon.service;
 
-import com.chalang.hackathon.dto.LivePriceDto;
 import com.chalang.hackathon.dto.StatsDTO;
 import com.chalang.hackathon.dto.StockDataDto;
 import com.chalang.hackathon.dto.StocksDetail;
@@ -15,7 +14,6 @@ import com.chalang.hackathon.repository.CompanyRepository;
 import com.chalang.hackathon.repository.StockRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.DataInput;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -135,5 +133,21 @@ public class StockScreenerService {
       result.add(tableView);
     }
     return result;
+  }
+
+  public StatsDTO getByCompanyData(String query) {
+    StockData companyData = stockRepository.findByCompanyName(query).get();
+    Optional<Company> result = companyRepository.findById(companyData.getSearchId());
+    if (result.isPresent()){
+      try {
+        Map<String, Object> map = OBJECT_MAPPER.readValue(result.get().getStats(), Map.class);
+        Map<String, Object> statsMap = (Map<String, Object>) map.get("stats");
+        // Convert the "stats" object to DTO
+        return OBJECT_MAPPER.convertValue(statsMap, StatsDTO.class);
+      } catch (JsonProcessingException e) {
+        throw new BadRequestException("something fail", e);
+      }
+    }
+    return new StatsDTO();
   }
 }

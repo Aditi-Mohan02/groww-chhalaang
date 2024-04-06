@@ -25,4 +25,5 @@ public class Company {
 
   @Column(length = 1000)
   public String stats;
+
 }

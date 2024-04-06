@@ -1,6 +1,7 @@
 package com.chalang.hackathon.controller;
 
 
+import com.chalang.hackathon.dto.StatsDTO;
 import com.chalang.hackathon.dto.TableView;
 import com.chalang.hackathon.dto.TopStocks;
 import com.chalang.hackathon.service.DataStorage;
@@ -41,7 +42,7 @@ public class StockScreener {
   }
 
   @GetMapping("/search")
-  public List<TableView> searchCompanies(@RequestParam(value = "query", required = false) String query) {
+  public List<TableView> searchStocks(@RequestParam(value = "query", required = false) String query) {
     if (query != null && !query.isEmpty()) {
       return service.searchCompanies(query);
     } else {
@@ -49,5 +50,8 @@ public class StockScreener {
     }
   }
 
-
+  @GetMapping("/company/search")
+  public StatsDTO searchByCompanies(@RequestParam(value = "companyName", required = false) String query) {
+    return service.getByCompanyData(query);
+  }
 }
