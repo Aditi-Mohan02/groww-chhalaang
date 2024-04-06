@@ -7,6 +7,7 @@ import ShareHoldingPatternChart from "../../components/shareHoldingPatternChart/
 import FinancialChartTabs from "../../components/financialChartTabs/FinancialChartTabs";
 import { apiresponse } from "../../data";
 import { useParams } from "react-router-dom";
+import axios from 'axios';
 
 const StockOverview = () => {
   const [stockDetails, setStockDetails] = useState<IStockDetails | null>(null);
@@ -14,8 +15,13 @@ const StockOverview = () => {
   console.log(id)
 
   useEffect(() => {
-    const fetchData = () => {
-      setStockDetails(apiresponse as unknown as IStockDetails);
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('http://localhost:8090/top/stocks');
+            setStockDetails( response.data ?? apiresponse as unknown as IStockDetails);
+        } catch (error) {
+            console.log(error)
+          }
     };
 
     fetchData();
