@@ -18,8 +18,8 @@ const StockOverview = () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await axios.get('http://localhost:8090/top/stocks');
-            setStockDetails( response.data ?? apiresponse as unknown as IStockDetails);
+           // const response = await axios.get('http://localhost:8090/top/stocks');
+            setStockDetails( apiresponse as unknown as IStockDetails);
         } catch (error) {
             console.log(error)
           }
