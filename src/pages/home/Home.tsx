@@ -3,6 +3,10 @@ import TopBox from "../../components/topBox/TopBox";
 import "./home.scss";
 import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
+import axios from 'axios';
+import { useEffect, useState } from "react";
+
+
 
 const chartSetting = {
   xAxis: [
@@ -55,6 +59,23 @@ const dataset = [
 const valueFormatter = (value: number | null) => `${value}mm`;
 
 export const Home = () => {
+
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8090/top/stocks');
+        setData(response.data);
+      } catch (error) {
+        console.log("error")
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <Users />

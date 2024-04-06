@@ -15,7 +15,7 @@ type Props = {
 
 const handleRowDoubleClick = () => {
   {
-    window.open('https://example.com', '_blank');
+    window.open('http://localhost:5173/overview', '_blank');
   }}
 
 
