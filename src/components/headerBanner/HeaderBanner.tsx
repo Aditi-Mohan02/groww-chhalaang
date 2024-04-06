@@ -41,7 +41,7 @@ const HeaderBanner: React.FC<RatioProps> = ({
             <DataDisplay label="ROCE" value={`${getRoundedNumber(stockDetails.stats.sectorRoce)}%`} />
             <DataDisplay label="ROE" value={`${getRoundedNumber(stockDetails.stats.sectorRoe)}%`} />
             <DataDisplay label="Current Price"  value={`₹${getRoundedNumber(stockDetails.stats.bookValue)}`} /> 
-            <DataDisplay label="High / Low" value={`₹${getRoundedNumber(stockDetails.priceData.nse.yearHighPrice)} / ₹${getRoundedNumber(stockDetails.priceData.nse.yearLowPrice)}`} />
+            {/* <DataDisplay label="High / Low" value={`₹${getRoundedNumber(stockDetails.priceData.nse.yearHighPrice)} / ₹${getRoundedNumber(stockDetails.priceData.nse.yearLowPrice)}`} /> */}
             <DataDisplay label="Book Value" value={`₹${getRoundedNumber(stockDetails.stats.bookValue)}`} />
             <DataDisplay label="Dividend Yield" value={`${getRoundedNumber(stockDetails.stats.dividendYieldInPercent)}%`} />
             <DataDisplay label="Face Value" value={`₹${getRoundedNumber(stockDetails.stats.faceValue)}`} />

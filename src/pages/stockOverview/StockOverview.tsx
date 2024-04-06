@@ -18,8 +18,10 @@ const StockOverview = () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-           // const response = await axios.get('http://localhost:8090/top/stocks');
-            setStockDetails( apiresponse as unknown as IStockDetails);
+          const url = `http://localhost:8091/company/search?companyName=${id}`;
+          const finalUrl =url.replace('%20', ' ');
+           const response = await axios.get(finalUrl);
+            setStockDetails(response.data?? apiresponse as unknown as IStockDetails);
         } catch (error) {
             console.log(error)
           }
@@ -27,7 +29,7 @@ const StockOverview = () => {
 
     fetchData();
   }, []); 
-
+  // stockDetails.details.fullName = id??'';
   return (
     <div>
     <Navbar />
@@ -40,15 +42,15 @@ const StockOverview = () => {
           <Grid item xs={12}>
             <CandlestickChart title={stockDetails.details.fullName} />
           </Grid>
-          <Grid item xs={6}>
+          {/* <Grid item xs={6}>
             <PeersDataGrid peerList={stockDetails.similarAssets.peerList} />
-          </Grid>
-          <Grid item xs={6}>
+          </Grid> */}
+          <Grid item xs={12}>
             <FinancialChartTabs financialStatement={stockDetails.financialStatement} />
           </Grid>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <ShareHoldingPatternChart shareHoldingPattern={stockDetails.shareHoldingPattern} />
-          </Grid>
+          </Grid> */}
         </>
       )}
     </Grid>

@@ -86,10 +86,10 @@ export const Home = () => {
       <Users />
       <Grid container spacing={2}>
       <Grid item xs={4}>
-      <VolumeTable data={topGainers} />
+      <Gainertable data={topGainers} />
       </Grid>
       <Grid item xs={4}>
-      <VolumeTable data={topLosers} />
+      <Gainertable data={topLosers} />
       </Grid>
       <Grid item xs={4}>
       <VolumeTable data={mostTraded} />
@@ -116,6 +116,31 @@ const VolumeTable = ({ data }) => {
             <TableRow key={index}>
               <TableCell>{item.companyName}</TableCell>
               <TableCell>{item.volumeValue}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};
+
+const Gainertable = ({ data }) => {
+  return (
+    <TableContainer component={Paper} style={{ width: '100%' }}>
+      <Table>
+        <TableHead style={{backgroundColor:'#03054E'}}>
+          <TableRow>
+            <TableCell style={{color:'white'}}>Company Name</TableCell>
+            <TableCell style={{color:'white'}}>Gain/Loss</TableCell>
+            <TableCell style={{color:'white'}}>Price</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((item, index) => (
+            <TableRow key={index}>
+              <TableCell>{item.companyName}</TableCell>
+              <TableCell>{item.dayChangePerc.toFixed(2)}</TableCell>
+              <TableCell>{item.price.toFixed(2)}</TableCell>
             </TableRow>
           ))}
         </TableBody>

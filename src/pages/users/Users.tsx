@@ -60,7 +60,7 @@ export const Users = () => {
   );
 
   const columns: GridColDef[] = [
-    { field: "id", headerName: "ID", width: 100, },
+    // { field: "id", headerName: "ID", width: 100, },
     {
       field: "companyName",
       headerName: "Company Name",

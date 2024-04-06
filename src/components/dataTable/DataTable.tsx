@@ -13,9 +13,9 @@ type Props = {
   rows: object[];
 };
 
-const handleRowDoubleClick = () => {
+const handleRowDoubleClick = (companyName:string) => {
   {
-    window.open('http://localhost:5173/overview', '_blank');
+    window.open(`http://localhost:5173/overview/${companyName}`, '_blank');
   }}
 
 
@@ -49,7 +49,7 @@ const DataTable = (props: Props) => {
           disableColumnFilter
           disableDensitySelector
           disableColumnSelector
-          onRowDoubleClick={handleRowDoubleClick}
+          onRowDoubleClick={(arg)=> handleRowDoubleClick(arg.row.companyName)}
         />
       </ThemeProvider>
     </div>
