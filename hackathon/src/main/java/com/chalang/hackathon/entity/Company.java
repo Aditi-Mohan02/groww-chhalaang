@@ -23,7 +23,6 @@ public class Company {
   @Column(name = "id")
   public String searchId;
 
-  @Column(length = 1000)
+  @Column(length = 100000)
   public String stats;
-
 }

@@ -1,6 +1,7 @@
 package com.chalang.hackathon.controller;
 
 
+import com.chalang.hackathon.dto.Stats;
 import com.chalang.hackathon.dto.StatsDTO;
 import com.chalang.hackathon.dto.TableView;
 import com.chalang.hackathon.dto.TopStocks;
@@ -51,7 +52,7 @@ public class StockScreener {
   }
 
   @GetMapping("/company/search")
-  public StatsDTO searchByCompanies(@RequestParam(value = "companyName", required = false) String query) {
+  public Stats searchByCompanies(@RequestParam(value = "companyName", required = false) String query) {
     return service.getByCompanyData(query);
   }
 }
