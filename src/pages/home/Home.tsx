@@ -5,6 +5,7 @@ import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 
 
 
@@ -60,14 +61,20 @@ const valueFormatter = (value: number | null) => `${value}mm`;
 
 export const Home = () => {
 
-  const [data, setData] = useState(null);
+  const [topGainers, setTopGainers] = useState<any[]>([]);
+  const [topLosers, setTopLosers] = useState<any[]>([]);
+  const [mostTraded, setMostTraded] = useState<any[]>([])
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://localhost:8090/top/stocks');
-        setData(response.data);
+        const { topGainer, topLooser, volume } = response.data;
+
+        setTopGainers(topGainer);
+        setTopLosers(topLooser);
+        setMostTraded(volume);
       } catch (error) {
         console.log("error")
       }
@@ -81,35 +88,44 @@ export const Home = () => {
       <Users />
     <div className="home">
       <div className="box box1">
-      <BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ dataKey: 'seoul', label: 'Top Five Gainers', valueFormatter }]}
-      layout="horizontal"
-      {...chartSetting}
-    />
+      <VolumeTable data={topGainers} />
+
       </div>
       <div className="box box1">
-      <BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ dataKey: 'seoul', label: 'Top Five Losers', valueFormatter }]}
-      layout="horizontal"
-      {...chartSetting}
-    />
+      <VolumeTable data={topLosers} />
       </div>
       <div className="box box1">
-      <BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ dataKey: 'seoul', label: 'Most Traded', valueFormatter }]}
-      layout="horizontal"
-      {...chartSetting}
-    />
+        <VolumeTable data={mostTraded} />
+    
       </div>
+
+      
 
     </div>
     </>
 
+  );
+};
+
+const VolumeTable = ({ data }) => {
+  return (
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Company Name</TableCell>
+            <TableCell>Volume</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((item, index) => (
+            <TableRow key={index}>
+              <TableCell>{item.companyName}</TableCell>
+              <TableCell>{item.volumeValue}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
