@@ -56,7 +56,6 @@ export const Users = () => {
     <div className="users">
       <div className="info">
         <h1>Users</h1>
-        <button>Add New User</button>
       </div>
       <DataTable slug="users" columns={columns} rows={users} />
     </div>
