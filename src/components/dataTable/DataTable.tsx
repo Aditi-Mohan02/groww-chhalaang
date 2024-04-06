@@ -13,6 +13,13 @@ type Props = {
   rows: object[];
 };
 
+const handleRowDoubleClick = () => {
+  {
+    window.open('https://example.com', '_blank');
+  }}
+
+
+
 const DataTable = (props: Props) => {
 
   return (
@@ -42,6 +49,7 @@ const DataTable = (props: Props) => {
           disableColumnFilter
           disableDensitySelector
           disableColumnSelector
+          onRowDoubleClick={handleRowDoubleClick}
         />
       </ThemeProvider>
     </div>
