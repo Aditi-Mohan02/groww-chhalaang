@@ -66,7 +66,7 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/overview",
+      path: "/overview/:id",
       element: <StockOverview />,
     },
   ]);
