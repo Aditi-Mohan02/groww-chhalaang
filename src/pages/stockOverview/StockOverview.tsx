@@ -6,6 +6,7 @@ import { apiresponse } from "../../data";
 import PeersDataGrid from "../../components/peersDataGrid/PeersDataGrid";
 import ShareHoldingPatternChart from "../../components/shareHoldingPatternChart/ShareHoldingPatternChart";
 import FinancialChartTabs from "../../components/financialChartTabs/FinancialChartTabs";
+import Navbar from "../../components/navbar/Navbar";
 
 const StockOverview = () => {
 
@@ -19,6 +20,8 @@ const StockOverview = () => {
    })
     
       return (
+        <div>
+        <Navbar />
         <Grid container spacing={2} pt={2}>
                {stockDetails &&
             <>
@@ -44,7 +47,9 @@ const StockOverview = () => {
                       </>
 }
         </Grid>
+        </div>
       );
+
 }
 
 export default StockOverview;
