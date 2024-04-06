@@ -56,6 +56,10 @@ export const Users = () => {
     <div className="users">
       <div className="info">
         <h1>Users</h1>
+<<<<<<< HEAD
+=======
+        <button>Add New User</button>
+>>>>>>> f17038dd08f7450684009daadcab936a39c1529f
       </div>
       <DataTable slug="users" columns={columns} rows={users} />
     </div>
