@@ -50,25 +50,25 @@ export const Users = () => {
       field: "Market Price",
       headerName: "Market Price",
       width: 200,
-      editable: true,
+      editable: false,
     },
     {
       field: "Close Price",
       headerName: "Close Price",
       width: 200,
-      editable: true,
+      editable: false,
     },
     {
       field: "Market Cap",
       headerName: "Market Cap",
       width: 200,
-      editable: true,
+      editable: false,
     },
     {
       field: "P/E Ratio",
       headerName: "P/E Ratio",
       width: 200,
-      editable: true,
+      editable: false,
     },
 
   ];
