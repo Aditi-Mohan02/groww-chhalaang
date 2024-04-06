@@ -73,16 +73,32 @@ export const Users = () => {
 
   ];
 
-  const [age, setAge] = useState('');
+  const [industry, setIndustry] = useState('');
+  const [index, setIndex] = useState('');
 
-  const handleChange = (event: { target: { value: string; }; }) => {
-    setAge(event.target.value as string);
+  const handleChangeIndustry = (event: { target: { value: string; }; }) => {
+    setIndustry(event.target.value as string);
+  };
+  const handleChangeIndex = (event: { target: { value: string; }; }) => {
+    setIndex(event.target.value as string);
   };
 
   const [value, setValue] = useState<number[]>([20, 37]);
+  const [value1, setValue1] = useState<number[]>([20, 37]);
+  const [value2, setValue2] = useState<number[]>([20, 37]);
+  const [value3, setValue3] = useState<number[]>([20, 37]);
 
   const handleChangeSlider = (event: Event, newValue: number | number[]) => {
     setValue(newValue as number[]);
+  };
+  const handleChangeSlider1 = (event: Event, newValue: number | number[]) => {
+    setValue1(newValue as number[]);
+  };
+  const handleChangeSlider2 = (event: Event, newValue: number | number[]) => {
+    setValue2(newValue as number[]);
+  };
+  const handleChangeSlider3 = (event: Event, newValue: number | number[]) => {
+    setValue3(newValue as number[]);
   };
 
   return (
@@ -99,13 +115,13 @@ export const Users = () => {
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      value={age}
+                      value={industry}
                       label="Industry"
-                      onChange={handleChange}
+                      onChange={handleChangeIndustry}
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value={10}>Agriculture</MenuItem>
+                      <MenuItem value={20}>Machinery</MenuItem>
+                      <MenuItem value={30}>Pharmaceutical</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
@@ -115,13 +131,13 @@ export const Users = () => {
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"
-                      value={age}
+                      value={index}
                       label="Industry"
-                      onChange={handleChange}
+                      onChange={handleChangeIndex}
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value={10}>SENSEX</MenuItem>
+                      <MenuItem value={20}>Nifty 50</MenuItem>
+                      <MenuItem value={30}>Nifty</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
@@ -143,8 +159,8 @@ export const Users = () => {
                   </Typography>
                   <Slider
                     getAriaLabel={() => 'Temperature range'}
-                    value={value}
-                    onChange={handleChangeSlider}
+                    value={value1}
+                    onChange={handleChangeSlider1}
                     valueLabelDisplay="auto"
                     getAriaValueText={valuetext}
                   />
@@ -155,8 +171,8 @@ export const Users = () => {
                   </Typography>
                   <Slider
                     getAriaLabel={() => 'Temperature range'}
-                    value={value}
-                    onChange={handleChangeSlider}
+                    value={value2}
+                    onChange={handleChangeSlider2}
                     valueLabelDisplay="auto"
                     getAriaValueText={valuetext}
                   />
@@ -167,8 +183,8 @@ export const Users = () => {
                   </Typography>
                   <Slider
                     getAriaLabel={() => 'Temperature range'}
-                    value={value}
-                    onChange={handleChangeSlider}
+                    value={value3}
+                    onChange={handleChangeSlider3}
                     valueLabelDisplay="auto"
                     getAriaValueText={valuetext}
                   />

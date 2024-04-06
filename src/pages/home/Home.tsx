@@ -3,7 +3,7 @@ import "./home.scss";
 import { BarChart } from '@mui/x-charts/BarChart';
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Grid } from "@mui/material";
 
 
 
@@ -84,22 +84,18 @@ export const Home = () => {
   return (
     <>
       <Users />
-    <div className="home">
-      <div className="box box1">
+      <Grid container spacing={2}>
+      <Grid item xs={4}>
       <VolumeTable data={topGainers} />
-
-      </div>
-      <div className="box box1">
+      </Grid>
+      <Grid item xs={4}>
       <VolumeTable data={topLosers} />
-      </div>
-      <div className="box box1">
-        <VolumeTable data={mostTraded} />
-    
-      </div>
-
-      
-
-    </div>
+      </Grid>
+      <Grid item xs={4}>
+      <VolumeTable data={mostTraded} />
+      </Grid>
+    </Grid>
+  
     </>
 
   );
@@ -107,12 +103,12 @@ export const Home = () => {
 
 const VolumeTable = ({ data }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{ width: '100%' }}>
       <Table>
-        <TableHead>
+        <TableHead style={{backgroundColor:'#03054E'}}>
           <TableRow>
-            <TableCell>Company Name</TableCell>
-            <TableCell>Volume</TableCell>
+            <TableCell style={{color:'white'}}>Company Name</TableCell>
+            <TableCell style={{color:'white'}}>Volume</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
