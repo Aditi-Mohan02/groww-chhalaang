@@ -1,3 +1,4 @@
+import StockOverview from "./pages/stockOverview/StockOverview";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import { Home } from "./pages/home/Home";
@@ -63,6 +64,10 @@ function App() {
     {
       path: "register",
       element: <Register />,
+    },
+    {
+      path: "/overview",
+      element: <StockOverview />,
     },
   ]);
 
