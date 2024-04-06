@@ -1,5 +1,5 @@
+import StockOverview from "./pages/stockOverview/StockOverview";
 import Footer from "./components/footer/Footer";
-import Menu from "./components/menu/Menu";
 import Navbar from "./components/navbar/Navbar";
 import { Home } from "./pages/home/Home";
 import Login from "./pages/login/Login";
@@ -64,6 +64,10 @@ function App() {
     {
       path: "register",
       element: <Register />,
+    },
+    {
+      path: "/overview",
+      element: <StockOverview />,
     },
   ]);
 
