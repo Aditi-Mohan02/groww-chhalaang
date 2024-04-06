@@ -2,6 +2,7 @@ import DataTable from "../../components/dataTable/DataTable";
 import { users } from "../../data";
 import "./users.scss";
 import { GridColDef } from "@mui/x-data-grid";
+import { Grid, Paper } from '@mui/material';
 
 export const Users = () => {
   const columns: GridColDef[] = [
@@ -54,10 +55,15 @@ export const Users = () => {
 
   return (
     <div className="users">
-      <div className="info">
-        <h1>Users</h1>
-      </div>
-      <DataTable slug="users" columns={columns} rows={users} />
+       <Grid container spacing={2}>
+      <Grid item xs={3}>
+        <Paper>        <h1>Filters</h1></Paper>
+      </Grid>
+      <Grid item xs={9}>
+        <Paper>      <DataTable slug="users" columns={columns} rows={users} /></Paper>
+      </Grid>
+    </Grid>
+
     </div>
   );
 };
