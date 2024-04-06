@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "stocks")
@@ -17,13 +18,11 @@ public class StockData {
 
   @Id
   @Column(name = "id")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  public Integer id;
+  public String searchId;
   public String isin;
   public String growwContractId;
   public String companyName;
   public String companyShortName;
-  public String searchId;
   public Integer industryCode;
   public Integer bseScriptCode;
   public String nseScriptCode;

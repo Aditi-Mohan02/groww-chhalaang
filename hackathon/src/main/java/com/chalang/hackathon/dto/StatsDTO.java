@@ -2,14 +2,20 @@ package com.chalang.hackathon.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
+@ToString
 public class StatsDTO {
   private double marketCap;
   private double pbRatio;
-  private double peRatio;
+  private Double peRatio;
   private double divYield;
   private double bookValue;
   private double epsTtm;
