@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Box } from '@mui/material';
 import ReactApexChart from 'react-apexcharts';
 import dayjs from 'dayjs';
 import { CandleStickData } from '../../data';
@@ -38,7 +38,7 @@ const CandlestickChart: React.FC<ICandlestickChart> = ({title}) => {
                     },
                     orientation: 'horizontal',
                     offsetY: 7,
-                    text: 'Annotation Test'
+                    // text: 'Annotation Test'
                 }
             }]
         },
@@ -61,9 +61,10 @@ const CandlestickChart: React.FC<ICandlestickChart> = ({title}) => {
     };
 
     return (
-        <Grid>
-            <ReactApexChart options={options} series={series} type="candlestick" height={350} />
-        </Grid>
+      <Box style={{ height: 500 }}>
+      <ReactApexChart options={options} series={series} type="candlestick"   width="100%"
+              height="100%"/>
+            </Box>
     );
 };
 

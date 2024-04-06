@@ -1002,3 +1002,640 @@ export const CandleStickData =  [
     y: [6604.98, 6606, 6604.07, 6606]
   },
 ];
+
+export const apiresponse={
+  "header": {
+      "searchId": "hdfc-bank-ltd",
+      "growwCompanyId": "GSTK500180",
+      "isin": "INE040A01034",
+      "industryId": 40101010,
+      "industryName": "Banks",
+      "displayName": "HDFC Bank",
+      "shortName": "HDFC Bank",
+      "type": "STOCK",
+      "isFnoEnabled": true,
+      "nseScriptCode": "HDFCBANK",
+      "bseScriptCode": "500180",
+      "isBseTradable": true,
+      "isNseTradable": true,
+      "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK500180.png",
+      "floatingShares": 7449107474,
+      "isBseFnoEnabled": false,
+      "isNseFnoEnabled": true
+  },
+  "details": {
+      "fullName": "HDFC Bank",
+      "parentCompany": "HDFC Bank Limited",
+      "headquarters": "MUMBAI",
+      "ceo": "Mr. Sashidhar Jagdishan",
+      "managingDirector": "Mr. Sashidhar Jagdishan",
+      "foundedYear": 1994,
+      "businessSummary": "HDFC Bank Limited (the Bank) is a financial services conglomerate that offers a full suite of financial services, from banking to insurance, and mutual funds through its subsidiaries. The Bank caters to a range of banking services covering commercial and investment banking and transactional/branch banking. Its Treasury segment includes net interest earnings from its investment portfolio, money market borrowing and lending, gains or losses on investment operations and on account of trading in foreign exchange and derivative contracts. The Retail Banking segment includes Digital Banking, and Other retail banking. The Wholesale Banking segment provides loans, non-fund facilities and transaction services to large corporates, public sector units, government bodies, financial institutions and medium scale enterprises. Its subsidiaries include HDFC Securities Ltd., HDB Financial Services Ltd., HDFC Asset Management Co. Ltd, and HDFC ERGO General Insurance Co. Ltd.",
+      "websiteUrl": "https://www.hdfcbank.com/"
+  },
+  "brandDtos": [
+      {
+          "name": "HDFC Bank Debit Card",
+          "logoUrl": "https://assets-netstorage.groww.in/stock-assets/brand_logo/INE040A01034/HDFC%20Bank%20Debit%20Card/1.%20regalia-669x262.png"
+      },
+      {
+          "name": "HDFC Bank",
+          "logoUrl": "https://assets-netstorage.groww.in/stock-assets/brand_logo/INE040A01034/HDFC%20Bank/4.%20hdfc-bank-logo-e1357800186247.png"
+      },
+      {
+          "name": "HDFC_Bank.png",
+          "logoUrl": "https://assets-netstorage.groww.in/stock-assets/brand_logo/INE040A01034/HDFC_Bank.png"
+      }
+  ],
+  "stats": {
+      "marketCap": 1177065.34,
+      "pbRatio": 2.69,
+      "peRatio": 19.94,
+      "divYield": 0.9,
+      "bookValue": 575.6588705,
+      "epsTtm": 77.71,
+      "roe": 13.49897978269006,
+      "industryPe": 14.540778488104875,
+      "cappedType": "Large Cap",
+      "dividendYieldInPercent": 0.9,
+      "faceValue": 1,
+      "returnOnAssets": 0.0,
+      "operatingProfitMargin": 82.872522354787,
+      "netProfitMargin": 23.448224774217888,
+      "evToSales": 0.0,
+      "evToEbitda": 20.05,
+      "earningsYield": 0.9006662280957147,
+      "sectorPb": 2.1522622613997844,
+      "sectorDivYield": 0.8524867847787806,
+      "sectorRoe": 14.315278023886657,
+      "sectorRoce": 5.508082532503328,
+      "ToOcf": -25.812343931157454,
+      "priceToFcf": 9.43,
+      "roic": 0.0,
+      "pePremiumVsSector": 0.37131584916942195,
+      "pbPremiumVsSector": 0.24984768271246027,
+      "divYieldVsSector": 0.04751321522121943,
+      "sectorPe": 14.540778488104875,
+      "priceToSales": 3.41,
+      "pegRatio": 0.9659698058950398,
+      "priceToOcf":0.0
+  },
+  "fundamentals": [
+      {
+          "name": "Market Cap",
+          "shortName": "Mkt Cap",
+          "value": "₹11,77,065Cr"
+      },
+      {
+          "name": "ROE",
+          "shortName": "ROE",
+          "value": "13.50%"
+      },
+      {
+          "name": "P/E Ratio(TTM)",
+          "shortName": "P/E Ratio(TTM)",
+          "value": "19.94"
+      },
+      {
+          "name": "EPS(TTM)",
+          "shortName": "EPS(TTM)",
+          "value": "77.71"
+      },
+      {
+          "name": "P/B Ratio",
+          "shortName": "P/B Ratio",
+          "value": "2.69"
+      },
+      {
+          "name": "Dividend Yield",
+          "shortName": "Div Yield",
+          "value": "0.90%"
+      },
+      {
+          "name": "Industry P/E",
+          "shortName": "Industry P/E",
+          "value": "14.54"
+      },
+      {
+          "name": "Book Value",
+          "shortName": "Book Value",
+          "value": "575.66"
+      },
+      {
+          "name": "Debt to Equity",
+          "shortName": "Debt to Equity",
+          "value": "NA"
+      },
+      {
+          "name": "Face Value",
+          "shortName": "Face Value",
+          "value": "1"
+      }
+  ],
+  "shareHoldingPattern": {
+      "Jun '23": {
+          "promoters": {
+              "individual": {
+                  "percent": 25.5199
+              },
+              "government": {
+                  "percent": 0.0
+              },
+              "corporation": {
+                  "percent": 0.0
+              }
+          },
+          "mutualFunds": {
+              "percent": 17.5996
+          },
+          "otherDomesticInstitutions": {
+              "insurance": {
+                  "percent": 7.701700000000001
+              },
+              "otherFirms": {
+                  "percent": 0.0
+              }
+          },
+          "foreignInstitutions": {
+              "percent": 33.3765
+          },
+          "retailAndOthers": {
+              "percent": 15.802300000000013
+          }
+      },
+      "Jul '23": {
+          "promoters": {
+              "individual": {
+                  "percent": 0.0
+              },
+              "government": {
+                  "percent": 0.0
+              },
+              "corporation": {
+                  "percent": 0.0
+              }
+          },
+          "mutualFunds": {
+              "percent": 19.1287
+          },
+          "otherDomesticInstitutions": {
+              "insurance": {
+                  "percent": 10.879700000000003
+              },
+              "otherFirms": {
+                  "percent": 0.0
+              }
+          },
+          "foreignInstitutions": {
+              "percent": 53.9284
+          },
+          "retailAndOthers": {
+              "percent": 16.063200000000002
+          }
+      },
+      "Sep '23": {
+          "promoters": {
+              "individual": {
+                  "percent": 0.0
+              },
+              "government": {
+                  "percent": 0.0
+              },
+              "corporation": {
+                  "percent": 0.0
+              }
+          },
+          "mutualFunds": {
+              "percent": 19.7112
+          },
+          "otherDomesticInstitutions": {
+              "insurance": {
+                  "percent": 8.8333
+              },
+              "otherFirms": {
+                  "percent": 0.0
+              }
+          },
+          "foreignInstitutions": {
+              "percent": 52.1327
+          },
+          "retailAndOthers": {
+              "percent": 19.322800000000008
+          }
+      },
+      "Dec '23": {
+          "promoters": {
+              "individual": {
+                  "percent": 0.0
+              },
+              "government": {
+                  "percent": 0.0
+              },
+              "corporation": {
+                  "percent": 0.0
+              }
+          },
+          "mutualFunds": {
+              "percent": 19.4456
+          },
+          "otherDomesticInstitutions": {
+              "insurance": {
+                  "percent": 9.1669
+              },
+              "otherFirms": {
+                  "percent": 0.0
+              }
+          },
+          "foreignInstitutions": {
+              "percent": 52.301
+          },
+          "retailAndOthers": {
+              "percent": 19.0865
+          }
+      },
+      "Mar '24": {
+          "promoters": {
+              "individual": {
+                  "percent": 0.0
+              },
+              "government": {
+                  "percent": 0.0
+              },
+              "corporation": {
+                  "percent": 0.0
+              }
+          },
+          "mutualFunds": {
+              "percent": 23.1686
+          },
+          "otherDomesticInstitutions": {
+              "insurance": {
+                  "percent": 10.427699999999998
+              },
+              "otherFirms": {
+                  "percent": 0.0
+              }
+          },
+          "foreignInstitutions": {
+              "percent": 47.833
+          },
+          "retailAndOthers": {
+              "percent": 18.570700000000002
+          }
+      }
+  },
+  "fundsInvested": [
+      {
+          "name": "Tata Banking and Financial Services Fund Direct Growth",
+          "searchId": "tata-banking-and-financial-services-fund-direct-growth",
+          "investedAumPercent": 20.5,
+          "rating": 4,
+          "return3y": 16.17,
+          "return1y": 30.97,
+          "return5y": 15.35,
+          "logoUrl": "https://assets-netstorage.groww.in/mf-assets/logos/tata_groww.png"
+      },
+      {
+          "name": "ICICI Prudential Banking and Financial Services Direct Plan Growth",
+          "searchId": "icici-prudential-banking-and-financial-services-fund-direct-growth",
+          "investedAumPercent": 19.27642146,
+          "rating": 3,
+          "return3y": 15.23,
+          "return1y": 26.84,
+          "return5y": 11.67,
+          "logoUrl": "https://assets-netstorage.groww.in/mf-assets/logos/icici_groww.png"
+      },
+      {
+          "name": "Mirae Asset Banking and Financial Services Fund Direct   Growth",
+          "searchId": "mirae-asset-banking-and-financial-services-fund-direct-growth",
+          "investedAumPercent": 17.92592462,
+          "rating": 4,
+          "return3y": 16.53,
+          "return1y": 31.27,
+          "logoUrl": "https://assets-netstorage.groww.in/mf-assets/logos/mirae_groww.png"
+      },
+      {
+          "name": "Nippon India Banking & Financial Services Fund Direct Growth",
+          "searchId": "nippon-india-banking-financial-services-fund-direct-growth",
+          "investedAumPercent": 17.5,
+          "rating": 4,
+          "return3y": 21.7,
+          "return1y": 35.95,
+          "return5y": 13.67,
+          "logoUrl": "https://assets-netstorage.groww.in/mf-assets/logos/reliance_groww.png"
+      }
+  ],
+  "priceData": {
+      "nse": {
+          "yearLowPrice": 1363.55,
+          "yearHighPrice": 1757.5
+      },
+      "bse": {
+          "yearLowPrice": 1363.45,
+          "yearHighPrice": 1757.8
+      }
+  },
+  "financialStatement": [
+      {
+          "title": "Revenue",
+          "yearly": {
+              "2019": 124107.7909,
+              "2020": 147068.2663,
+              "2021": 155885.28,
+              "2022": 167695.4,
+              "2023": 204666.1
+          },
+          "quarterly": {
+              "Dec '22": 54122.84,
+              "Mar '23": 57158.84,
+              "Jun '23": 61021.29,
+              "Sep '23": 107566.62,
+              "Dec '23": 115015.51
+          }
+      },
+      {
+          "title": "Profit",
+          "yearly": {
+              "2019": 22445.6129,
+              "2020": 27296.2653,
+              "2021": 31856.77,
+              "2022": 38150.9,
+              "2023": 46148.7
+          },
+          "quarterly": {
+              "Dec '22": 12735.43,
+              "Mar '23": 12634.01,
+              "Jun '23": 12403.25,
+              "Sep '23": 17312.38,
+              "Dec '23": 17718.0
+          }
+      },
+      {
+          "title": "Net Worth",
+          "yearly": {
+              "2019": 154174.454,
+              "2020": 176935.3465,
+              "2021": 210442.94,
+              "2022": 248046.58,
+              "2023": 290297.76
+          }
+      }
+  ],
+  "expertRating": {
+      "buyCount": 38,
+      "sellCount": 1,
+      "holdCount": 3,
+      "buyPercent": 90.48,
+      "sellPercent": 2.38,
+      "holdPercent": 7.14
+  },
+  "similarAssets": {
+      "type": "STOCK",
+      "size": 10,
+      "peerList": [
+          {
+              "companyHeader": {
+                  "searchId": "icici-bank-ltd",
+                  "growwCompanyId": "GSTK532174",
+                  "isin": "INE090A01021",
+                  "industryId": 40101010,
+                  "displayName": "ICICI Bank",
+                  "shortName": "ICICI Bank",
+                  "nseScriptCode": "ICICIBANK",
+                  "bseScriptCode": "532174",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK532174.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 864.4,
+              "nseYearHigh": 1113.55,
+              "bseYearLow": 864.45,
+              "bseYearHigh": 1113.35,
+              "marketCap": 760084.4,
+              "peRatio": 17.91,
+              "pbRatio": 3.17
+          },
+          {
+              "companyHeader": {
+                  "searchId": "kotak-mahindra-bank-ltd",
+                  "growwCompanyId": "GSTK500247",
+                  "isin": "INE237A01028",
+                  "industryId": 40101010,
+                  "displayName": "Kotak Mahindra Bank",
+                  "shortName": "Kotak Mahindra Bank",
+                  "nseScriptCode": "KOTAKBANK",
+                  "bseScriptCode": "500247",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK500247.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 1667.4,
+              "nseYearHigh": 2064.4,
+              "bseYearLow": 1666.8,
+              "bseYearHigh": 2063.0,
+              "marketCap": 354893.58,
+              "peRatio": 20.35,
+              "pbRatio": 2.95
+          },
+          {
+              "companyHeader": {
+                  "searchId": "axis-bank-ltd",
+                  "growwCompanyId": "GSTK532215",
+                  "isin": "INE238A01034",
+                  "industryId": 40101010,
+                  "displayName": "Axis Bank",
+                  "shortName": "Axis Bank",
+                  "nseScriptCode": "AXISBANK",
+                  "bseScriptCode": "532215",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK532215.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 843.95,
+              "nseYearHigh": 1151.85,
+              "bseYearLow": 844.05,
+              "bseYearHigh": 1151.5,
+              "marketCap": 326620.88,
+              "peRatio": 24.33,
+              "pbRatio": 2.2
+          },
+          {
+              "companyHeader": {
+                  "searchId": "indusind-bank-ltd",
+                  "growwCompanyId": "GSTK532187",
+                  "isin": "INE095A01012",
+                  "industryId": 40101010,
+                  "displayName": "IndusInd Bank",
+                  "shortName": "IndusInd Bank",
+                  "nseScriptCode": "INDUSINDBK",
+                  "bseScriptCode": "532187",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK532187.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 1007.95,
+              "nseYearHigh": 1694.5,
+              "bseYearLow": 1009.05,
+              "bseYearHigh": 1694.35,
+              "marketCap": 120705.75,
+              "peRatio": 13.92,
+              "pbRatio": 2.08
+          },
+          {
+              "companyHeader": {
+                  "searchId": "idbi-bank-ltd",
+                  "growwCompanyId": "GSTK500116",
+                  "isin": "INE008A01015",
+                  "industryId": 40101010,
+                  "displayName": "IDBI Bank",
+                  "shortName": "IDBI Bank",
+                  "nseScriptCode": "IDBI",
+                  "bseScriptCode": "500116",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK500116.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": false
+              },
+              "nseYearLow": 45.95,
+              "nseYearHigh": 98.7,
+              "bseYearLow": 45.86,
+              "bseYearHigh": 98.7,
+              "marketCap": 95395.31,
+              "peRatio": 17.85,
+              "pbRatio": 2.32
+          },
+          {
+              "companyHeader": {
+                  "searchId": "yes-bank-ltd",
+                  "growwCompanyId": "GSTK532648",
+                  "isin": "INE528G01035",
+                  "industryId": 40101010,
+                  "displayName": "Yes Bank",
+                  "shortName": "Yes Bank",
+                  "nseScriptCode": "YESBANK",
+                  "bseScriptCode": "532648",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK532648.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": false
+              },
+              "nseYearLow": 15.15,
+              "nseYearHigh": 32.85,
+              "bseYearLow": 14.1,
+              "bseYearHigh": 32.81,
+              "marketCap": 72552.6,
+              "peRatio": 70.06,
+              "pbRatio": 1.78
+          },
+          {
+              "companyHeader": {
+                  "searchId": "idfc-bank-ltd",
+                  "growwCompanyId": "GSTK539437",
+                  "isin": "INE092T01019",
+                  "industryId": 40101010,
+                  "displayName": "IDFC First Bank",
+                  "shortName": "IDFC First Bank",
+                  "nseScriptCode": "IDFCFIRSTB",
+                  "bseScriptCode": "539437",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK539437.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 53.35,
+              "nseYearHigh": 100.7,
+              "bseYearLow": 53.35,
+              "bseYearHigh": 100.74,
+              "marketCap": 57040.15,
+              "peRatio": 18.85,
+              "pbRatio": 1.86
+          },
+          {
+              "companyHeader": {
+                  "searchId": "au-small-finance-bank-ltd",
+                  "growwCompanyId": "GSTK540611",
+                  "isin": "INE949L01017",
+                  "industryId": 40101015,
+                  "displayName": "AU Small Finance Bank",
+                  "shortName": "AU Small Fin Bank",
+                  "nseScriptCode": "AUBANK",
+                  "bseScriptCode": "540611",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK540611.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 553.65,
+              "nseYearHigh": 813.4,
+              "bseYearLow": 553.9,
+              "bseYearHigh": 813.0,
+              "marketCap": 47108.69,
+              "peRatio": 29.65,
+              "pbRatio": 4.0
+          },
+          {
+              "companyHeader": {
+                  "searchId": "the-federal-bank-ltd",
+                  "growwCompanyId": "GSTK500469",
+                  "isin": "INE171A01029",
+                  "industryId": 40101010,
+                  "displayName": "Federal Bank",
+                  "shortName": "The Federal Bank",
+                  "nseScriptCode": "FEDERALBNK",
+                  "bseScriptCode": "500469",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK500469.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 121.0,
+              "nseYearHigh": 166.35,
+              "bseYearLow": 120.9,
+              "bseYearHigh": 166.65,
+              "marketCap": 37638.36,
+              "peRatio": 9.74,
+              "pbRatio": 1.36
+          },
+         
+
+
+{
+              "companyHeader": {
+                  "searchId": "bandhan-bank-ltd",
+                  "growwCompanyId": "GSTK541153",
+                  "isin": "INE545U01014",
+                  "industryId": 40101015,
+                  "displayName": "Bandhan Bank",
+                  "shortName": "Bandhan Bank",
+                  "nseScriptCode": "BANDHANBNK",
+                  "bseScriptCode": "541153",
+                  "isBseTradable": true,
+                  "isNseTradable": true,
+                  "logoUrl": "https://assets-netstorage.groww.in/stock-assets/logos/GSTK541153.png",
+                  "isBseFnoEnabled": false,
+                  "isNseFnoEnabled": true
+              },
+              "nseYearLow": 173.15,
+              "nseYearHigh": 272.0,
+              "bseYearLow": 173.45,
+              "bseYearHigh": 272.0,
+              "marketCap": 31800.54,
+              "peRatio": 10.66,
+              "pbRatio": 1.53
+          }
+      ]
+  }
+}
