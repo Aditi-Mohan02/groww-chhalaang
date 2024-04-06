@@ -18,9 +18,9 @@ function App() {
       <div className="main">
         <Navbar />
         <div className="container">
-          <div className="menuContainer">
+          {/* <div className="menuContainer">
             <Menu />
-          </div>
+          </div> */}
           <div className="contentContainer">
             <Outlet />
           </div>
