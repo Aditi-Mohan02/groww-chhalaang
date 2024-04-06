@@ -7,12 +7,12 @@ const EnhancedDataGrid = ({ rows, columns }) => {
       p: 2, // Padding around the Box
       display: 'flex',
       flexDirection: 'column',
-      gap: 2, // Space between elements
-      alignItems: 'center', // Align items in the center for a neat look
-      '& .MuiTypography-root': { // Apply styles directly to Typography within this Box
-        fontWeight: 'bold',
-        color: 'primary.main', // Use the primary color from the theme
-      },
+      gap: 2, 
+      alignItems: 'center', 
+      // '& .MuiTypography-root': { 
+      //   fontWeight: 'bold',
+      //   color: 'primary.main', 
+      // },
       '& .MuiDataGrid-root': { // Style the DataGrid
         backgroundColor: 'background.paper', // Use paper background for contrast
         borderColor: 'divider', // Border color from the theme for the DataGrid
@@ -25,7 +25,7 @@ const EnhancedDataGrid = ({ rows, columns }) => {
         },
       },
     }}>
-      <Typography variant="h6">Compare fundamentals with peers</Typography>
+      <Typography variant="h6" sx={{ color:'#13274F'}}>Compare fundamentals with peers</Typography>
       <Paper elevation={3} sx={{ height: 500, width: '100%', overflow: 'hidden' }}>
         <DataGrid
           rows={rows}

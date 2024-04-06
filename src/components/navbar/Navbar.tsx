@@ -2,6 +2,7 @@ import "./navbar.scss";
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import logoImg from '../../../public/logo.png';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -47,8 +48,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const Navbar = () => {
   return (
-    <div className="navbar" style={{ backgroundColor: '#03054E', marginBottom: 20 }}>
+    <div className="navbar" style={{ backgroundColor: '#03054E', marginBottom: 20, color:'white', fontFamily:'Candara' }}>
       <div className="logo">
+      <img src={logoImg} alt="InvestIntuit Logo" style={{maxHeight:'40px', maxWidth:'70px', marginRight:0}} />
         <span>InvestIntuit</span>
       </div>
       <Search>

@@ -1,7 +1,5 @@
 import { Users } from "../users/Users";
-import TopBox from "../../components/topBox/TopBox";
 import "./home.scss";
-import * as React from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 import axios from 'axios';
 import { useEffect, useState } from "react";
