@@ -3,9 +3,10 @@ import { users } from "../../data";
 import "./users.scss";
 import { GridColDef, GridRenderCellParams, GridTreeNodeWithRender } from "@mui/x-data-grid";
 import { Button, CssBaseline, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Slider, ThemeProvider, createTheme } from '@mui/material';
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useEffect, useMemo, useState } from "react";
 import Dialog from '@mui/material/Dialog';
 import Typography from '@mui/material/Typography';
+import axios from "axios";
 
 function valuetext(value: number) {
   return `${value}°C`;
@@ -15,13 +16,14 @@ export const Users = () => {
   const darkTheme = createTheme({
     palette: {
       primary: {
-        main: '#0077B6', // Set your desired blue color here
+        main: '#0077B6', 
       },
     },
   });
 
   const [openModal, setOpenModal] = useState(false);
   const [modalContent, setModalContent] = useState('');
+  const [data, setData] = useState<any[]>([]);
 
   const handleCellClick = (cellValues: GridRenderCellParams<any, any, any, GridTreeNodeWithRender>) => {
     setModalContent(cellValues.value);
@@ -31,10 +33,36 @@ export const Users = () => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8091/search');
+        setData(response.data)
+      } catch (error) {
+        console.log("error")
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const tableData = useMemo(
+    () =>
+      data.map((item) => ({
+        closePrice: item.closePrice,
+        marketCap: item.marketCap,
+        companyName: item.companyName,
+        id: Math.random(),
+        peRatio: item.peRatio,
+      })),
+    [data]
+  );
+
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 100, },
     {
-      field: "firstName",
+      field: "companyName",
       headerName: "Company Name",
       width: 300,
       renderCell: (cellValues) => (
@@ -47,25 +75,19 @@ export const Users = () => {
       ),
     },
     {
-      field: "Market Price",
-      headerName: "Market Price",
-      width: 200,
-      editable: false,
-    },
-    {
-      field: "Close Price",
+      field: "closePrice",
       headerName: "Close Price",
       width: 200,
       editable: false,
     },
     {
-      field: "Market Cap",
+      field: "marketCap",
       headerName: "Market Cap",
       width: 200,
       editable: false,
     },
     {
-      field: "P/E Ratio",
+      field: "peRatio",
       headerName: "P/E Ratio",
       width: 200,
       editable: false,
@@ -181,7 +203,7 @@ export const Users = () => {
             </Paper>
           </Grid>
           <Grid item xs={12}>
-            <Paper>     <DataTable columns={columns} rows={users} /></Paper>
+            <Paper>     <DataTable columns={columns} rows={tableData} /></Paper>
           </Grid>
           <Dialog open={openModal} onClose={handleCloseModal}>
             <div>{modalContent}</div>

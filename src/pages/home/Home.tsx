@@ -67,7 +67,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8090/top/stocks');
+        const response = await axios.get('http://localhost:8091/top/stocks');
         const { topGainer, topLooser, volume } = response.data;
 
         setTopGainers(topGainer);
