@@ -47,7 +47,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const Navbar = () => {
   return (
-    <div className="navbar" style={{ backgroundColor: 'black', marginBottom: 20 }}>
+    <div className="navbar" style={{ backgroundColor: '#03054E', marginBottom: 20 }}>
       <div className="logo">
         <span>InvestIntuit</span>
       </div>

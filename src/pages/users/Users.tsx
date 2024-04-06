@@ -14,7 +14,9 @@ function valuetext(value: number) {
 export const Users = () => {
   const darkTheme = createTheme({
     palette: {
-      mode: "light",
+      primary: {
+        main: '#0077B6', // Set your desired blue color here
+      },
     },
   });
 
@@ -85,11 +87,11 @@ export const Users = () => {
 
   return (
     <div className="users" style={{margin: 10}}>
-      <ThemeProvider theme={darkTheme}>
-        <CssBaseline />
+      {/* <ThemeProvider style>
+        <CssBaseline /> */}
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Paper style={{padding:20}}>
+            <Paper style={{padding:20 , backgroundColor: '#e5f0f2'}} >
               <Grid container spacing={4}>
                 <Grid item xs={4}>
                   <FormControl fullWidth >
@@ -172,8 +174,8 @@ export const Users = () => {
                   />
                 </Grid>
                 <Grid item style={{marginLeft: 700}}>
-                <Button variant="contained" style={{marginRight: 10, minWidth : '140px', maxWidth: '140px'}}>Clear Filters</Button>
-                <Button variant="contained" style={{ minWidth : '140px', maxWidth: '140px'}}>Search</Button>
+                <Button variant="contained" style={{marginRight: 10, minWidth : '140px', maxWidth: '140px', color: '#03045e',  borderColor: '#03045e', backgroundColor:'white'}}>Clear Filters</Button>
+                <Button variant="contained" style={{ minWidth : '140px', maxWidth: '140px', backgroundColor: '#03045e'}}>Search</Button>
                 </Grid>
               </Grid>
             </Paper>
@@ -185,7 +187,7 @@ export const Users = () => {
             <div>{modalContent}</div>
           </Dialog>
         </Grid>
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
     </div>
   );
 };
